@@ -1,0 +1,13 @@
+
+{{#each model as |reddit|}}
+  <p> {{reddit.data.score}} </p>
+  <p> Title: <a href = "{{reddit.data.url}}">{{reddit.data.title}} </a> </p>
+  <p> Number of comments:{{reddit.data.num_comments}} </p>
+  <p>archived: {{reddit.data.archived}}</p>
+  {{#if reddit.data.archived}}
+  <p>Archived</p>
+  {{else}}
+  <p>Not Archived</p>
+  {{/if}}
+
+{{//each}}
